@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #f5f5fa;
+  background: #0b0c12;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 15% 0%, rgba(124, 58, 237, .18), transparent 35%),
+    radial-gradient(ellipse at 100% 15%, rgba(236, 72, 153, .10), transparent 30%),
+    #0b0c12;
+}
+
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+
+.app-shell { width: min(1050px, calc(100% - 36px)); margin: 0 auto; padding: 54px 0 28px; }
+.hero { padding: 34px 0 28px; }
+.eyebrow { color: #b69aff; font-size: .72rem; font-weight: 700; letter-spacing: .18em; margin: 0 0 10px; }
+h1, h2, h3 { font-family: "Space Grotesk", sans-serif; }
+h1 { font-size: clamp(2.3rem, 6vw, 4rem); line-height: 1.05; margin: 0; letter-spacing: -.05em; }
+h1 span { font-size: .75em; }
+.subtitle { color: #a7a8b7; max-width: 590px; line-height: 1.7; margin: 17px 0 26px; }
+.stats { display: flex; gap: 12px; }
+.stat { min-width: 130px; padding: 15px 18px; border: 1px solid #292a38; border-radius: 14px; background: rgba(22, 23, 34, .8); display: flex; flex-direction: column; gap: 3px; }
+.stat strong { font-size: 1.35rem; }
+.stat span { color: #a7a8b7; font-size: .8rem; }
+.panel { background: #151620; border: 1px solid #2b2c3b; border-radius: 20px; padding: 25px; margin: 18px 0 42px; box-shadow: 0 18px 50px rgba(0,0,0,.18); }
+h2 { margin: 0 0 20px; font-size: 1.45rem; letter-spacing: -.025em; }
+form { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 16px; }
+.field-label { display: block; color: #c7c7d4; font-size: .82rem; font-weight: 600; margin: 8px 0 2px; }
+form .field-label { grid-column: 1 / -1; }
+input, textarea, select { width: 100%; border: 1px solid #343546; border-radius: 10px; background: #0e0f17; color: #f5f5fa; padding: 12px 13px; outline: none; }
+input:focus, textarea:focus, select:focus { border-color: #a78bfa; box-shadow: 0 0 0 3px rgba(167,139,250,.12); }
+textarea { resize: vertical; min-height: 78px; }
+form input, form textarea, form select, form .primary-button { grid-column: 1 / -1; }
+.primary-button { border: 0; border-radius: 10px; color: white; font-weight: 700; padding: 13px 18px; margin-top: 8px; background: linear-gradient(110deg, #7c3aed, #c026d3); transition: transform .15s, filter .15s; }
+.primary-button:hover { filter: brightness(1.12); transform: translateY(-1px); }
+.section-heading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 18px; }
+.section-heading h2 { margin-bottom: 0; font-size: 1.8rem; }
+.count-badge { color: #d7c9ff; background: #251a3c; border: 1px solid #48316d; padding: 7px 11px; border-radius: 100px; font-size: .8rem; }
+.movie-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.movie-card { padding: 21px; border-radius: 16px; background: #151620; border: 1px solid #2b2c3b; }
+.movie-card-top { display: flex; justify-content: space-between; align-items: start; gap: 12px; }
+.movie-card h3 { margin: 0 0 8px; font-size: 1.2rem; overflow-wrap: anywhere; }
+.rating-label { color: #fbbf24; min-height: 22px; margin: 0 0 17px; font-size: .92rem; }
+.remove-button { background: #2a171e; border: 1px solid #5c2939; color: #fda4af; border-radius: 8px; padding: 8px 10px; font-size: .78rem; }
+.remove-button:hover { background: #47202c; }
+.movie-card textarea { margin-bottom: 9px; }
+.movie-card select { margin-bottom: 3px; }
+.empty-state { text-align: center; padding: 48px 20px; border: 1px dashed #373849; border-radius: 16px; color: #a7a8b7; }
+.empty-state span { font-size: 2.3rem; }
+.empty-state h3 { color: #f5f5fa; margin: 10px 0 5px; }
+.empty-state p { margin: 0; }
+footer { text-align: center; color: #666879; padding: 30px 0 0; font-size: .8rem; }
+@media (max-width: 650px) {
+  .app-shell { width: min(100% - 24px, 520px); padding-top: 25px; }
+  .panel { padding: 18px; }
+  .movie-grid { grid-template-columns: 1fr; }
+  form { grid-template-columns: 1fr; }
+  .stats { gap: 8px; }
+  .stat { min-width: 0; flex: 1; }
+}
